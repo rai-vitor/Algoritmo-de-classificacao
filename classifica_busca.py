@@ -10,11 +10,6 @@ Ydummies_df = Y_df
 X = Xdummies_df.values
 Y = Ydummies_df.values
 
-#Algoritmo que chuta tudo 1
-acerto_base = max(Counter(Y).itervalues())
-taxa_de_acerto_base = 100.0 * acerto_base / len(Y)
-print("Taxa de acerto base: %f" % taxa_de_acerto_base)
-
 porcentagem_treino = 0.9
 
 tamanho_de_treino = porcentagem_treino * len(Y)
@@ -40,4 +35,9 @@ total_de_elementos = len(teste_dados)
 taxa_de_acerto = 100.0 * total_de_acertos / total_de_elementos
 
 print("Taxa de acerto do algoritmo: %f" % taxa_de_acerto)
-print(total_de_elementos)
+print("Total de elementos testados: %i" % total_de_elementos)
+
+#Algoritmo que chuta tudo 1
+acerto_base = max(Counter(teste_marcacoes).itervalues())
+taxa_de_acerto_base = 100.0 * acerto_base / len(teste_marcacoes)
+print("Taxa de acerto base: %f" % taxa_de_acerto_base)
